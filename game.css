@@ -1,3 +1,5 @@
+
+
 html {
 	background-color: #59b274;
 	font-family: Arial, sans-serif;
@@ -8,11 +10,11 @@ ul {
 	list-style-type: none;
 	display: flex;
 	justify-content: center;
-	font-size: 50px;
+	font-size: 30px;
 }
 
 li{
-	margin: 0 40px;
+	margin: 0 20px;
 }
 
 .container {
@@ -24,10 +26,60 @@ li{
 .left-side {
 	grid-column-start: 1;
 	grid-column-end: 2;
-	margin-right: 30px;
+	width: 100px;
 }
 
 .right-side {
 	grid-column-start: 2;
 	grid-column-end: 3;
 }
+
+
+.card {
+	background-color: #FFFFFF;
+	height: 100px;
+	width: 80px;
+	text-align: center;
+}
+
+
+.top-left {
+	position: relative;
+	display: inline;
+	right: 10px;
+}
+.top-right {
+	position: relative;
+	display: inline;
+	left: 10px;
+}
+.bottom-left {
+	position: relative;
+	display: inline;
+	top: 30px;
+	right: 10px;
+}
+.bottom-right {
+	position: relative;
+	display: inline;
+	top: 30px;
+	left: 10px;
+}
+
+
+#deck {
+	background-image: url(assets/card%20back%20blue.png);
+	background-size: 80px 65px;
+	height: 65px;
+	width: 80px;
+
+}
+
+#balance {
+	text-align: center;
+	position: relative;
+	top: 60px;
+	color: darkred;
+	font-size: 20px;
+}
+
