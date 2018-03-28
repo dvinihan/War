@@ -1,0 +1,33 @@
+html {
+	background-color: #59b274;
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	font-size: 50px;
+}
+
+li{
+	margin: 0 40px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+
+.left-side {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	margin-right: 30px;
+}
+
+.right-side {
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
