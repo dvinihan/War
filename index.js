@@ -10,19 +10,10 @@ function advanceText(){
 	document.getElementById('title').innerHTML = texts[textCounter];
 	
 	if(textCounter >= 5) {
-		loadGame();
+		window.location.href = "game.html";
 		return;
 	}
 	
-	textCounter++;
+	textCounter++; 
 }
-
-function loadGame() {
-	window.location.href = "game.html";
-}
-
-
-
-
-
 
