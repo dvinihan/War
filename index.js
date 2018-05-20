@@ -1,6 +1,5 @@
-let texts = ['Welcome to Texas Holdem\'!',
-						'Ready to play?',
-						'This is a one-player game of Holdem.',
+let texts = ['Ready to play?',
+						'There are no ties - suits add value!',
 						'You\'ll be playing against the computer.',
 						'Good luck!!',''];
 let textCounter = 0;
@@ -9,7 +8,7 @@ let textCounter = 0;
 function advanceText(){
 	document.getElementById('title').innerHTML = texts[textCounter];
 	
-	if(textCounter >= 5) {
+	if(textCounter == texts.length -1) {
 		window.location.href = "game.html";
 		return;
 	}

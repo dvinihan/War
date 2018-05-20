@@ -13,12 +13,9 @@ function main(){
 function playGame() {
 	
 	getBet();
+	updateMoney();
 	
-	document.getElementById('balance').innerHTML = "You have $" + balance;
-	document.getElementById("current-bet").innerHTML = "Current bet: $" + bet;
-	
-	//bet has been placed, time generate cards.
-	
+	//bet has been placed, time to generate cards.
 	let opponentCard = getRandomCard()[0];
 	let playerCard = getRandomCard()[0];
 	
@@ -31,16 +28,25 @@ function playGame() {
 	//see who wins!
 	if(playerScore > opponentScore){
 		//player wins
-		document.getElementsByClassName('outcome-text')[0].innerHTML = "You win!";
+		document.getElementsByClassName('outcome-text')[0].innerHTML = `You win \$${bet}!`;
 		
-		balance += (balance * 2);
+		balance += (bet * 2);
 			
 	} else {
 		//player loses
-		document.getElementsByClassName('outcome-text')[0].innerHTML = "You lose.";
+		document.getElementsByClassName('outcome-text')[0].innerHTML = 'You lose.';
 
 	}
 	
+	updateMoney();
+
+	
+}
+
+function updateMoney(){
+	document.getElementById('balance').innerHTML = "You have $" + balance;
+	
+	document.getElementById("current-bet").innerHTML = "Current bet: $" + bet;
 }
 
 function calculateScore(card){
@@ -83,7 +89,6 @@ function getBet(){
 		
 	//check to make sure it's a number
 	while(enteredBet.trim() == ""){
-				console.log('df');
 				enteredBet = prompt("Enter your bet.");
 			
 		while(isNaN(enteredBet)){
